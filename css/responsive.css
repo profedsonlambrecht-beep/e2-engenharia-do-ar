@@ -1,0 +1,352 @@
+/* =====================================================
+RESPONSIVO
+E² ENGENHARIA DO AR
+===================================================== */
+
+/* ==========================
+Notebook
+========================== */
+
+@media (max-width:1200px){
+
+.hero h2{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+}
+
+.container{
+
+width:95%;
+
+}
+
+}
+
+/* ==========================
+Tablet
+========================== */
+
+@media (max-width:992px){
+
+header .container{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px 0;
+
+}
+
+nav{
+
+margin:20px 0;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+height:auto;
+
+padding:160px 30px 100px;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+margin:auto;
+
+}
+
+.hero h2{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.botoes{
+
+justify-content:center;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.contadores{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.engenheiros{
+
+gap:40px;
+
+}
+
+}
+
+/* ==========================
+Celular Grande
+========================== */
+
+@media (max-width:768px){
+
+.logo{
+
+height:55px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.orcamento{
+
+display:none;
+
+}
+
+.hero{
+
+padding:140px 25px 80px;
+
+}
+
+.hero h1{
+
+font-size:16px;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+line-height:1.2;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+section{
+
+padding:70px 20px;
+
+}
+
+section h2{
+
+font-size:30px;
+
+margin-bottom:35px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contadores{
+
+grid-template-columns:1fr;
+
+}
+
+.numero{
+
+font-size:46px;
+
+}
+
+.engenheiros div{
+
+width:100%;
+
+}
+
+.engenheiros img{
+
+width:200px;
+
+height:200px;
+
+}
+
+.beneficios ul{
+
+grid-template-columns:1fr;
+
+}
+
+input,
+textarea{
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+
+/* ==========================
+Celulares Pequenos
+========================== */
+
+@media (max-width:480px){
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.btn,
+.btn2{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.card{
+
+padding:30px;
+
+}
+
+.card h3{
+
+font-size:22px;
+
+}
+
+.card i{
+
+font-size:45px;
+
+}
+
+.whatsapp{
+
+width:60px;
+
+height:60px;
+
+font-size:28px;
+
+right:20px;
+
+bottom:20px;
+
+}
+
+footer{
+
+padding:40px 20px;
+
+}
+
+footer p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================
+Monitores UltraWide
+========================== */
+
+@media (min-width:1600px){
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h2{
+
+font-size:72px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+}
+
+.container{
+
+max-width:1450px;
+
+}
+
+}
