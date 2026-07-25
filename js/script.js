@@ -211,98 +211,21 @@ hero.style.backgroundPositionY=y*0.4+"px";
 FORMULÁRIO
 =========================== */
 
-const form = document.querySelector("#contato-form") || document.querySelector("form");
-const statusMsg = document.querySelector("#form-status");
+const form=document.querySelector("form");
 
 if(form){
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit",(e)=>{
 
 e.preventDefault();
 
-const btn = form.querySelector("button");
+alert(
 
-const textoOriginal = btn.textContent;
+"Obrigado! Recebemos sua solicitação. Em breve nossa equipe entrará em contato."
 
-btn.disabled = true;
-
-btn.textContent = "Enviando...";
-
-if (statusMsg) {
-
-statusMsg.style.display = "block";
-
-statusMsg.style.color = "#003C78";
-
-statusMsg.textContent = "Enviando sua mensagem...";
-
-}
-
-try {
-
-const formData = new FormData(form);
-
-const response = await fetch("https://formsubmit.co/ajax/e2.engenhariadoar@gmail.com", {
-
-method: "POST",
-
-headers: {
-
-'Accept': 'application/json'
-
-},
-
-body: formData
-
-});
-
-const result = await response.json();
-
-if (response.ok) {
-
-if (statusMsg) {
-
-statusMsg.style.color = "#28a745";
-
-statusMsg.textContent = "✔ Mensagem enviada com sucesso! Em breve entraremos em contato.";
-
-} else {
-
-alert("✔ Mensagem enviada com sucesso! Em breve entraremos em contato.");
-
-}
+);
 
 form.reset();
-
-} else {
-
-throw new Error(result.message || "Erro no envio");
-
-}
-
-} catch (err) {
-
-console.error("Erro ao enviar formulário:", err);
-
-if (statusMsg) {
-
-statusMsg.style.color = "#dc3545";
-
-statusMsg.textContent = "✖ Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato pelo WhatsApp.";
-
-} else {
-
-alert("✖ Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato pelo WhatsApp.");
-
-}
-
-} finally {
-
-btn.disabled = false;
-
-btn.textContent = textoOriginal;
-
-}
 
 });
 
